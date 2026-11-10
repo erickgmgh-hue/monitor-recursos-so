@@ -10,7 +10,8 @@ app = Flask(__name__)
 if not os.path.exists('logs'):
     os.makedirs('logs')
 
-logging.basicConfig(filename='logs/app.log', level=logging.INFO)
+logging.basicConfig(filename='logs/app.log', level=logging.INFO,
+format='%(asctime)s [%(levelname)s] %(message)s')
 
 @app.route('/')
 def monitor():
