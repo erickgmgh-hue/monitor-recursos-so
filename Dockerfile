@@ -7,6 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ENV APP_TITLE="Monitor de Recursos - Proyecto SO"
+
 EXPOSE 5000
 
 CMD ["python", "app.py"]
